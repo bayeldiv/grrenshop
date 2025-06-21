@@ -12,6 +12,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { CiYoutube } from "react-icons/ci";
 import pay from "../../../assets/paypal.svg";
+
 const Footer = () => {
   return (
     <footer>
@@ -72,80 +73,86 @@ const Footer = () => {
               <p>contact@greenshop.com</p>
             </div>
             <div className={scss.contact}>
-              <FaPhoneVolume />
+              <FaPhoneVolume
+                style={{ fontSize: "clamp(0.75rem, 0.628rem + 0.47vw, 1rem)" }}
+              />
               <p>+88 01911 717 490</p>
             </div>
           </div>
         </div>
-        <div className={scss.grenaccount}>
-          <div className={scss.account}>
-            <h3>My Account</h3>
-            <li>My Account</li>
-            <li>Our stories</li>
-            <li>Contact us</li>
-            <li>Career</li>
-            <li>Specials</li>
-          </div>
-          <div className={scss.account}>
-            <h3>Help & Guide</h3>
-            <li>Help Center</li>
-            <li>How to Buy</li>
-            <li>Shipping & Delivery</li>
-            <li>Product Policy</li>
-            <li>How to Return</li>
-          </div>
-          <div className={scss.account}>
-            <h3>Categories</h3>
-            <li>House Plants</li>
-            <li>Potter Plants</li>
-            <li>Seeds</li>
-            <li>Small Plants</li>
-            <li>Accessories</li>
-          </div>
-          <div className={scss.greenMedia}>
-            <h2>Social Media</h2>
-            <div className={scss.internet}>
-              <p>
-                <FaFacebookF
-                  style={{
-                    fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
-                  }}
-                />
-              </p>
-              <p>
-                <FaInstagram
-                  style={{
-                    fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
-                  }}
-                />
-              </p>
-              <p>
-                <FaTwitter
-                  style={{
-                    fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
-                  }}
-                />
-              </p>
-              <p>
-                <FaLinkedinIn
-                  style={{
-                    fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
-                  }}
-                />
-              </p>
-              <p>
-                <CiYoutube
-                  style={{
-                    fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
-                  }}
-                />
-              </p>
+        <div className={scss.accountgren}>
+          <div className={scss.grenaccount}>
+            <div className={scss.account}>
+              <h3>My Account</h3>
+              <li>My Account</li>
+              <li>Our stories</li>
+              <li>Contact us</li>
+              <li>Career</li>
+              <li>Specials</li>
             </div>
-            <h3>We accept</h3>
-            <img src={pay} alt="" />
+            <div className={scss.account}>
+              <h3>Help & Guide</h3>
+              <li>Help Center</li>
+              <li>How to Buy</li>
+              <li>Shipping & Delivery</li>
+              <li>Product Policy</li>
+              <li>How to Return</li>
+            </div>
+            <div className={scss.account}>
+              <h3>Categories</h3>
+              <li>House Plants</li>
+              <li>Potter Plants</li>
+              <li>Seeds</li>
+              <li>Small Plants</li>
+              <li>Accessories</li>
+            </div>
+            <div className={scss.greenMedia}>
+              <h2>Social Media</h2>
+              <div className={scss.internet}>
+                <p>
+                  <FaFacebookF
+                    style={{
+                      fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
+                    }}
+                  />
+                </p>
+                <p>
+                  <FaInstagram
+                    style={{
+                      fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
+                    }}
+                  />
+                </p>
+                <p>
+                  <FaTwitter
+                    style={{
+                      fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
+                    }}
+                  />
+                </p>
+                <p>
+                  <FaLinkedinIn
+                    style={{
+                      fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
+                    }}
+                  />
+                </p>
+                <p>
+                  <CiYoutube
+                    style={{
+                      fontSize: "clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem)",
+                    }}
+                  />
+                </p>
+              </div>
+              <h3>We accept</h3>
+              <img src={pay} alt="" />
+            </div>
           </div>
+          <h5 className={scss.endtext}>
+            © 2021 GreenShop. All Rights Reserved.
+          </h5>
         </div>
-        <h5 className={scss.endtext}>© 2021 GreenShop. All Rights Reserved.</h5>
       </div>
     </footer>
   );

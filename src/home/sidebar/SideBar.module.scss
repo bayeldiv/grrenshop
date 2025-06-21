@@ -1,0 +1,164 @@
+.sidebar {
+  max-width: 325px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  h1 {
+    font-size: clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem);
+    font-weight: 700;
+    color: var(--default-text);
+    margin-bottom: 20px;
+  }
+
+  .sideblock {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .plants,
+    .numbers {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .plants {
+      h2 {
+        font-size: clamp(0.625rem, 0.472rem + 0.58vw, 0.938rem);
+        font-weight: 500;
+        color: var(--default-text);
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--default_green);
+        }
+      }
+    }
+
+    .numbers {
+      p {
+        font-size: clamp(0.625rem, 0.472rem + 0.58vw, 0.938rem);
+        font-weight: 400;
+        color: var(--default-text);
+      }
+    }
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 30px;
+
+    h2 {
+      font-size: clamp(0.625rem, 0.32rem + 1.16vw, 1.25rem);
+      font-weight: 700;
+      color: var(--default-text);
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--default-text);
+
+      span {
+        font-weight: 600;
+        color: var(--default_green);
+      }
+    }
+
+    .btn {
+      max-width: 110px;
+      width: 100%;
+      padding: 8px 12px;
+      background: var(--default_green);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #2a974d;
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: scale(0.96);
+      }
+    }
+
+    .size {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      h4 {
+        font-size: clamp(0.625rem, 0.32rem + 1.16vw, 1.25rem);
+        font-weight: 700;
+        color: var(--default-text);
+      }
+
+      .paragraper {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+
+        .parag,
+        .span {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          p,
+          span {
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--default-text);
+            transition: color 0.3s;
+
+            &:hover {
+              color: var(--default_green);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sale {
+  max-width: 325px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+    transform: rotate(1deg);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 470px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}

@@ -69,13 +69,16 @@
     max-width: clamp(7.5rem, 5.669rem + 6.98vw, 11.25rem);
     width: 100%;
     position: relative;
+    h6 {
+      font-size: 30px;
+      display: none;
+    }
+    @media (max-width: 640px) {
+      h6 {
+        display: flex;
+      }
+    }
 
-    // p {
-    //   max-width: 29px;
-    //   width: 100%;
-    //   max-height: 29px;
-    //   height: 100%;
-    // }
     button,
     a {
       transition: background-color 0.3s ease, transform 0.3s ease;

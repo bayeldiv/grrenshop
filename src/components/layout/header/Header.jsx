@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { SlBasketLoaded } from "react-icons/sl";
 import { CiLogin } from "react-icons/ci";
 import { Link } from "react-router-dom";
-
+import { RxHamburgerMenu } from "react-icons/rx";
 const Header = () => {
   const [click, setClick] = useState(false);
   return (
@@ -48,6 +48,9 @@ const Header = () => {
                 Login
               </button>
             </div>
+            <h6>
+              <RxHamburgerMenu />
+            </h6>
           </div>
         </div>
         <input

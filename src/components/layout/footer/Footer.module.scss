@@ -6,6 +6,11 @@
   width: 100%;
   max-height: 250px;
   height: 100%;
+  @media (max-width: 1024px) {
+    max-width: 1024px;
+    width: 100%;
+    gap: 10px;
+  }
 
   .gardenbox {
     display: flex;
@@ -28,10 +33,20 @@
         max-width: 78px;
         width: 100%;
         object-fit: cover;
-        // max-height: 87px;
-        // height: 100%;
         height: 87px;
         object-fit: cover;
+      }
+      @media (max-width: 768px) {
+        img {
+          max-width: 50px;
+          height: 60px;
+        }
+      }
+      @media (max-width: 640px) {
+        img {
+          max-width: 40px;
+          height: 50px;
+        }
       }
       h1 {
         font-weight: 700;
@@ -46,6 +61,47 @@
         line-height: 23px;
         color: var(--paragraper);
       }
+      @media (max-width: 768px) {
+        p {
+          max-width: 100px;
+          line-height: 16px;
+          // text-align: center;
+        }
+      }
+      @media (max-width: 640px) {
+        p {
+          max-width: 100px;
+          line-height: 14px;
+          text-align: center;
+        }
+      }
+    }
+    @media (max-width: 1024px) {
+      .garden {
+        max-width: 200px;
+        gap: 3px;
+        height: 260px;
+      }
+    }
+    @media (max-width: 768px) {
+      .garden {
+        max-width: 100px;
+        display: none;
+        height: 210px;
+        // align-items: center;
+      }
+    }
+    @media (max-width: 640px) {
+      .garden {
+        max-width: 150px;
+        height: 150px;
+        align-items: center;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    .gardenbox {
+      padding-block: 20px;
     }
   }
   .email {
@@ -56,15 +112,16 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    @media (max-width: "950px") {
-      .email {
-        max-width: 300px;
-      }
-    }
+
     h1 {
       font-size: clamp(0.625rem, 0.381rem + 0.93vw, 1.125rem);
       font-weight: 700;
       color: var(--default-text);
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: clamp(0.625rem, 0.381rem + 0.93vw, 0.775rem);
+      }
     }
     .inputbox {
       display: flex;
@@ -77,8 +134,29 @@
         border: none;
         font-size: clamp(0.625rem, 0.442rem + 0.7vw, 1rem);
       }
+      @media (max-width: 768px) {
+        input {
+          padding: 10px 15px;
+        }
+      }
+      @media (max-width: 640px) {
+        input {
+          padding: 8px 12px;
+        }
+      }
       button {
         border-radius: none;
+      }
+      @media (max-width: 768px) {
+        button {
+          padding: 10px 15px;
+          font-size: clamp(0.625rem, 0.489rem + 0.68vw, 0rem);
+        }
+      }
+      @media (max-width: 640px) {
+        button {
+          padding: 8px 12px;
+        }
       }
     }
     p {
@@ -88,6 +166,48 @@
       max-width: 358px;
       width: 100%;
     }
+    @media (max-width: 768px) {
+      p {
+        line-height: 20px;
+        max-width: 222px;
+      }
+    }
+    @media (max-width: 640px) {
+      p {
+        line-height: 15px;
+        max-width: 210px;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .email {
+      max-width: 220px;
+      max-height: 180px;
+      gap: 5px;
+      display: none;
+    }
+  }
+  @media (max-width: 640px) {
+    .email {
+      max-width: 220px;
+      max-height: 180px;
+      gap: 5px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .email {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 318px;
+    gap: 5px;
   }
 }
 .greenshop {
@@ -120,6 +240,18 @@
         transform: scale(1.05);
       }
     }
+    @media (max-width: 1024px) {
+      img {
+        max-width: 33px;
+        max-height: 33px;
+      }
+    }
+    @media (max-width: 640px) {
+      img {
+        max-width: 25px;
+        max-height: 25px;
+      }
+    }
 
     h1 {
       font-weight: 800;
@@ -129,6 +261,16 @@
 
       &:hover {
         color: #496e1b;
+      }
+    }
+    @media (max-width: 1024px) {
+      h1 {
+        font-size: clamp(0.875rem, 0.57rem + 1.16vw, 1.2rem);
+      }
+    }
+    @media (max-width: 640px) {
+      h1 {
+        font-size: clamp(0.875rem, 0.57rem + 1.16vw, 0.2rem);
       }
     }
   }
@@ -149,7 +291,40 @@
         width: 100%;
         line-height: 22px;
       }
+      @media (max-width: 1024px) {
+        p {
+          max-width: 180px;
+          line-height: 18px;
+        }
+      }
+      @media (max-width: 768px) {
+        p {
+          max-width: 150px;
+          line-height: 12px;
+          font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.125rem);
+          text-align: center;
+        }
+      }
+      @media (max-width: 640px) {
+        p {
+          max-width: 110px;
+          line-height: 10px;
+          font-size: 8px;
+          text-align: center;
+        }
+      }
     }
+    @media (max-width: 1024px) {
+      .geo {
+        gap: 5px;
+      }
+    }
+    @media (max-width: 768px) {
+      .geo {
+        flex-direction: column;
+      }
+    }
+
     .contact {
       display: flex;
       align-items: center;
@@ -157,6 +332,27 @@
       p {
         font-weight: 400;
         font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.875rem);
+      }
+      @media (max-width: 1024px) {
+        p {
+          font-size: 11px;
+        }
+      }
+      @media (max-width: 768px) {
+        p {
+          font-size: 9px;
+        }
+      }
+    }
+    @media (max-width: 1024px) {
+      .contact {
+        gap: 3px;
+      }
+    }
+    @media (max-width: 768px) {
+      .contact {
+        flex-direction: column;
+        gap: 10px;
       }
     }
     .message {
@@ -167,82 +363,151 @@
         font-weight: 400;
         font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.875rem);
       }
+      @media (max-width: 768px) {
+        p {
+          font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.575rem);
+          display: flex;
+          align-items: center;
+        }
+      }
+      @media (max-width: 640px) {
+        p {
+          font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.125rem);
+          display: flex;
+          align-items: center;
+        }
+      }
     }
-  }
-}
-.grenaccount {
-  display: flex;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  max-height: 236px;
-  height: 100%;
-  padding-left: 30px;
-  .account {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 250px;
-    width: 100%;
-    h3 {
-      font-size: clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem);
-      font-weight: 700;
-      color: var(--default-text);
-      color: var(--default-text);
-    }
-    li {
-      font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.875rem);
-      font-weight: 400;
-      color: var(--default-text);
-    }
-  }
-  .greenMedia {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    padding-block: 10px;
-    h2 {
-      font-size: clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem);
-      font-weight: 700;
-      color: var(--default-text);
-    }
-    h3 {
-      font-size: clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem);
-      font-weight: 700;
-      color: var(--default-text);
-    }
-    img {
-      max-width: 224px;
-      width: 100%;
-      max-height: 26px;
-      height: 100%;
-      object-fit: cover;
-    }
-    .internet {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      p {
-        border: 1.5px solid #46a35833;
-        border-radius: 4px;
-        max-width: 30px;
-        width: 100%;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--default_green);
+    @media (max-width: 768px) {
+      .message {
+        flex-direction: column;
+        gap: 5px;
       }
     }
   }
 }
-.endtext {
+@media (max-width: 768px) {
+  .greenshop {
+    align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  .greenshop {
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    max-height: 120px;
+    gap: 10px;
+  }
+}
+.accountgren {
   display: flex;
-  text-align: center;
-  justify-content: center;
-  border-top: 2px solid #46a35833;
-  padding-top: 10px;
-  font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.875rem);
-  font-weight: 400;
-  color: var(--default-text);
+  flex-direction: column;
+  position: relative;
+  .endtext {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-top: 2px solid #46a35833;
+    padding-top: 10px;
+    font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.875rem);
+    font-weight: 400;
+    color: var(--default-text);
+  }
+  @media (max-width: 640px) {
+    .endtext {
+      position: absolute;
+      top: 550px;
+      right: 100px;
+    }
+  }
+  .grenaccount {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 236px;
+    height: 100%;
+    padding-left: 30px;
+    .account {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 250px;
+      width: 100%;
+      h3 {
+        font-size: clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem);
+        font-weight: 700;
+        color: var(--default-text);
+        color: var(--default-text);
+      }
+      li {
+        font-size: clamp(0.625rem, 0.503rem + 0.47vw, 0.875rem);
+        font-weight: 400;
+        color: var(--default-text);
+      }
+    }
+    @media (max-width: 640px) {
+      .account {
+        align-items: center;
+        gap: 7px;
+      }
+    }
+    .greenMedia {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding-block: 10px;
+      h2 {
+        font-size: clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem);
+        font-weight: 700;
+        color: var(--default-text);
+      }
+      h3 {
+        font-size: clamp(0.75rem, 0.567rem + 0.7vw, 1.125rem);
+        font-weight: 700;
+        color: var(--default-text);
+      }
+      img {
+        max-width: 224px;
+        width: 100%;
+        max-height: 26px;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media (max-width: 640px) {
+        img {
+          max-width: 190px;
+        }
+      }
+      .internet {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+          border: 1.5px solid #46a35833;
+          border-radius: 4px;
+          max-width: 30px;
+          width: 100%;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--default_green);
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      .greenMedia {
+        align-items: center;
+        gap: 13px;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    .grenaccount {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
 }
