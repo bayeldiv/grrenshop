@@ -14,6 +14,7 @@ import img8 from "../../assets/image 8.svg";
 import { SlBasketLoaded } from "react-icons/sl";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 const ListPlants = () => {
   return (
     <div id={scss.list}>

@@ -6,8 +6,10 @@ import { SlBasketLoaded } from "react-icons/sl";
 import { CiLogin } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { BiUser } from "react-icons/bi";
 const Header = () => {
   const [click, setClick] = useState(false);
+  const [create, setCreate] = useState(false);
   return (
     <header>
       <div className="container">
@@ -17,15 +19,19 @@ const Header = () => {
             <h1>GREENSHOP</h1>
           </div>
           <div className={scss.nav}>
+            <Link to="/post">
+              <li>+</li>
+            </Link>
             <Link to="/home">
               <li>Home</li>
             </Link>
+
             <li>Shop</li>
             <li>Plant Care</li>
             <li>Blogs</li>
           </div>
           <div className={scss.logblock}>
-            <p>
+            <p className={scss.search}>
               <CiSearch
                 onClick={() => setClick(true)}
                 style={{
@@ -48,6 +54,9 @@ const Header = () => {
                 Login
               </button>
             </div>
+            <h5>
+              <BiUser />
+            </h5>
             <h6>
               <RxHamburgerMenu />
             </h6>

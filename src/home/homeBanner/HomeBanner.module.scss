@@ -1,3 +1,6 @@
+#honebanner {
+  padding-top: 60px;
+}
 .bannerblock {
   display: flex;
   align-items: center;
@@ -326,6 +329,7 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        background-color: none;
       }
     }
   }
@@ -342,9 +346,19 @@
     }
   }
 }
+@media (max-width: 1024px) {
+  .bannerblock {
+    margin-top: 60px;
+  }
+}
 @media (max-width: 768px) {
   .bannerblock {
     padding: 15px;
+  }
+}
+@media (max-width: 620px) {
+  .bannerblock {
+    margin-top: 45px;
   }
 }
 @media (max-width: 475px) {

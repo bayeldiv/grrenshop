@@ -1,12 +1,22 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomeBanner from "../home/homeBanner/HomeBanner";
+import ListPage from "../components/pages/detailsPage/ListPage";
+import Post from "../home/postsPlants/Post";
 
 const MainRoutes = () => {
   const routes = [
     {
       link: "/home",
       element: <HomeBanner />,
+    },
+    {
+      link: "/list/:id",
+      element: <ListPage />,
+    },
+    {
+      link: "/post",
+      element: <Post />,
     },
   ];
   return (

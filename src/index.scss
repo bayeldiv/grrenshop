@@ -63,3 +63,8 @@ button {
   gap: 7px;
   border-radius: 3px;
 }
+@media (max-width: 640px) {
+  button {
+    gap: 4px;
+  }
+}
