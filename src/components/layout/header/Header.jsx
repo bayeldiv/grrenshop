@@ -18,10 +18,10 @@ const Header = () => {
             <img src={logo} alt="" />
             <h1>GREENSHOP</h1>
           </div>
+          <Link to="/post">
+            <li className={scss.create}>+</li>
+          </Link>
           <div className={scss.nav}>
-            <Link to="/post">
-              <li className={scss.create}>+</li>
-            </Link>
             <Link to="/">
               <li>Home</li>
             </Link>
