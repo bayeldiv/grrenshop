@@ -1,21 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import scss from "./ListPlants.module.scss";
 import { BsChevronDown } from "react-icons/bs";
-import img1 from "../../assets/image 1.svg";
-import img23 from "../../assets/image2.svg";
-import img2 from "../../assets/image 3.svg";
-import img3 from "../../assets/image 4.svg";
-import img4 from "../../assets/image 5.svg";
-import img5 from "../../assets/image 6.svg";
-import img6 from "../../assets/image 7.svg";
-import img7 from "../../assets/image 8.svg";
-import img8 from "../../assets/image 8.svg";
+import { MdDeleteOutline } from "react-icons/md";
 
 import { SlBasketLoaded } from "react-icons/sl";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { useShop } from "../../context/ProductContext";
 const ListPlants = () => {
+  const { readShop, data, deleteShop } = useShop();
+  useEffect(() => {
+    readShop();
+  }, []);
   return (
     <div id={scss.list}>
       <div className="container">
@@ -33,159 +29,31 @@ const ListPlants = () => {
           </div>
         </div>
         <div className={scss.plants}>
-          <div className={scss.plant}>
-            <img src={img1} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
+          {data.map((item, index) => (
+            <div key={index}>
+              <div className={scss.plant}>
+                <img src={item.image} alt="" />
+                <h2>13% OFF</h2>
+                <div className={scss.plantbox}>
+                  <p>
+                    <SlBasketLoaded />
+                  </p>
+                  <p>
+                    <MdFavoriteBorder />
+                  </p>
+                  <p>
+                    <IoIosSearch />
+                  </p>
+                  <p onClick={() => deleteShop(item._id)}>
+                    <MdDeleteOutline />
+                  </p>
+                </div>
+                <p>{item.name}</p>
+                <h1>{`${item.price} $`}</h1>
+                <h1>{item.category}</h1>
+              </div>
             </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img23} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img4} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img5} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img6} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img7} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img8} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img2} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
-          <div className={scss.plant}>
-            <img src={img3} alt="" />
-            <h2>13% OFF</h2>
-            <div className={scss.plantbox}>
-              <p>
-                <SlBasketLoaded />
-              </p>
-              <p>
-                <MdFavoriteBorder />
-              </p>
-              <p>
-                <IoIosSearch />
-              </p>
-            </div>
-            <p>Barberton Daisy</p>
-            <h1>$119.00</h1>
-          </div>
+          ))}
         </div>
       </div>
     </div>
