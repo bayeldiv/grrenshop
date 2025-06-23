@@ -20,7 +20,7 @@ const Header = () => {
           </div>
           <div className={scss.nav}>
             <Link to="/post">
-              <li>+</li>
+              <li className={scss.create}>+</li>
             </Link>
             <Link to="/">
               <li>Home</li>
