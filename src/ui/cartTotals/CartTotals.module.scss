@@ -1,0 +1,217 @@
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  padding-block: 10px;
+  border-bottom: 1.6px solid var(--paragpaper);
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--default-text);
+  }
+  .nav {
+    max-width: 390px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--default-text);
+    }
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--default-text);
+  }
+}
+.cartTotals {
+  display: flex;
+  align-items: start;
+  .productblock {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+    max-width: 980px;
+    width: 100%;
+    gap: 140px;
+    position: relative;
+    .imgbox {
+      display: flex;
+      align-items: center;
+      max-width: 250px;
+      width: 100%;
+      gap: 10px;
+      img {
+        max-width: 80px;
+        width: 100%;
+        max-height: 80px;
+        height: 100%;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .title {
+        h1 {
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--default-text);
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--paragpaper);
+          span {
+            color: var(--default-text);
+          }
+        }
+      }
+    }
+    .countbox {
+      display: flex;
+      justify-content: space-between;
+      //   align-items: center;
+      max-width: 410px;
+      width: 100%;
+      h2 {
+        max-width: 55px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--paragpaper);
+      }
+      .count {
+        max-width: 96px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-weight: 600;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: var(--default_green);
+        }
+        h3 {
+          font-size: 17px;
+          font-weight: 400;
+          color: var(--default-text);
+        }
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--default_green);
+      }
+    }
+    h5 {
+      position: absolute;
+      right: 40px;
+      font-size: 20px;
+      color: var(--paragpaper);
+    }
+  }
+  .totalsblock {
+    max-width: 335px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 20px;
+    h1 {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--default-text);
+    }
+    .inputbox {
+      max-width: 300px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      input {
+        font-size: 14px;
+        font-weight: 400;
+        max-width: 200px;
+        width: 100%;
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+        //   border: 1px solid var(--default-text);
+        padding-inline: 5px;
+        &:hover {
+          border: 1.5px solid var(--default_green);
+        }
+      }
+      button {
+        height: 35px;
+      }
+    }
+    .titlePrice {
+      display: flex;
+      justify-content: space-between;
+      max-width: 330px;
+      width: 100%;
+      .totalstitle {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        h2 {
+          font-size: 15px;
+          font-weight: 400;
+          color: var(--default-text);
+        }
+      }
+      .totalsprice {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--default-text);
+        }
+        h3 {
+          font-size: 12px;
+          font-weight: 500;
+          color: var(--default_green);
+        }
+      }
+    }
+    .total {
+      display: flex;
+      align-items: center;
+      max-width: 335px;
+      width: 100%;
+      justify-content: space-between;
+      h4 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--default-text);
+      }
+      p {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--default_green);
+      }
+    }
+    h5 {
+      font-size: 15px;
+      font-weight: 400;
+      text-align: center;
+      color: var(--default_green);
+    }
+  }
+}

@@ -2,16 +2,20 @@ import axios from "axios";
 import React, { useContext, useReducer, useState } from "react";
 import { createContext } from "react";
 import { API } from "../helpers/const";
+import { data } from "react-router-dom";
 const productContext = createContext();
 export const useShop = () => useContext(productContext);
 
 const initialState = {
   value: [],
+  oneShop: {},
 };
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "GET":
       return { ...state, value: action.payload };
+    case "GET_ONE":
+      return { ...state, oneShop: action.payload };
 
     default:
       return state;
@@ -45,11 +49,32 @@ const ProductContext = ({ children }) => {
     await axios.delete(`${API}/${id}`);
     readShop();
   }
+  async function getOneShop(id) {
+    try {
+      const { data } = await axios.get(`${API}/${id}`);
+      dispatch({ type: "GET_ONE", payload: data });
+      console.log(data);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 3;
+  const count = Math.ceil(data.length / itemsPerPage);
+
+  function handlePage() {
+    let start = (page - 1) * itemsPerPage;
+    let end = start + itemsPerPage;
+    return product.slice(start, end);
+  }
+
   const values = {
     addShop,
     readShop,
     deleteShop,
+    getOneShop,
     data: state.value,
+    oneShop: state.oneShop,
     searchValue,
     setSearchValue,
     totalPage,
@@ -57,6 +82,9 @@ const ProductContext = ({ children }) => {
     setCurrentPage,
     selectedColor,
     setSelectedColor,
+    handlePage,
+    count,
+    setPage,
   };
 
   return (

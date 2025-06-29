@@ -1,6 +1,7 @@
 import HomeBanner from "./homeBanner/HomeBanner";
 import SideBar from "./sidebar/SideBar";
 import ListPlants from "./listPlants/ListPlants";
+import Login from "../authentication/Login";
 
 const Home = () => {
   return (

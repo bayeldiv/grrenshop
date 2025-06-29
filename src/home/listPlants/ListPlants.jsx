@@ -7,6 +7,8 @@ import { SlBasketLoaded } from "react-icons/sl";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 import { useShop } from "../../context/ProductContext";
+import { Link } from "react-router-dom";
+import Pagination from "../../ui/pagination/Paginations";
 const ListPlants = () => {
   const { readShop, data, deleteShop } = useShop();
   useEffect(() => {
@@ -32,7 +34,9 @@ const ListPlants = () => {
           {data.map((item, index) => (
             <div key={index}>
               <div className={scss.plant}>
-                <img src={item.image} alt="" />
+                <Link to={`/list/${item._id}`}>
+                  <img src={item.image} alt="" />
+                </Link>
                 <h2>13% OFF</h2>
                 <div className={scss.plantbox}>
                   <p>
@@ -55,6 +59,7 @@ const ListPlants = () => {
             </div>
           ))}
         </div>
+        <Pagination />
       </div>
     </div>
   );
